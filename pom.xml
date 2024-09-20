@@ -16,9 +16,19 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
   <build>
     <finalName>maven-cloudaseem-app</finalName>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version> <!-- Use the latest version -->
+        <configuration>
+          <source>17</source>
+          <target>17</target>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -28,7 +38,7 @@
             <manifest>
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
               <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-              <mainClass>in.aseemcloud.Main</mainClass> <!-- Update this with your main class -->
+              <mainClass>in.aseemcloud.Main</mainClass> <!-- Ensure this is correct -->
             </manifest>
           </archive>
         </configuration>
